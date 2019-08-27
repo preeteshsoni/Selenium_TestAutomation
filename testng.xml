@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Suite" parallel="false">
 
-	<!-- <listeners>
+	<listeners>
 		<listener class-name="utilities.Reporting" />
-	</listeners> -->
+	</listeners>
 	
 	<test name="Test">
 		<parameter name="browser" value="firefox" />

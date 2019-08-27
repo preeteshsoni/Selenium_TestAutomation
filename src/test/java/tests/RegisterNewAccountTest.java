@@ -1,6 +1,9 @@
 package tests;
 
 import static org.testng.Assert.assertEquals;
+
+import java.io.IOException;
+
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -26,9 +29,16 @@ public class RegisterNewAccountTest extends TestBase{
 		}
 		else
 		{
+			try {
+				captureScreen(driver,"registerNewAccount");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			Assert.assertTrue(false);
 			logger.info("Page Title not matched");
 		}
+
 
 		gurukulaHomePage.clickOnRegisterLink();
 
