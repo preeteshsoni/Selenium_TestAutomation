@@ -1,0 +1,7 @@
+23:59:33,034  INFO gurukula<strong>{1}</strong>:45 - firefox browser opened
+23:59:33,826  INFO gurukula<strong>{1}</strong>:53 - URL is opened
+23:59:33,881  INFO gurukula<strong>{1}</strong>:25 - Page Title matched
+23:59:35,101  INFO gurukula<strong>{1}</strong>:46 - name entered
+23:59:35,161  INFO gurukula<strong>{1}</strong>:49 - email entered
+23:59:35,199  INFO gurukula<strong>{1}</strong>:52 - password entered
+23:59:35,236  INFO gurukula<strong>{1}</strong>:55 - confirm password entered

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="7418" started-at="2019-08-26T23:59:29 CEST" finished-at="2019-08-26T23:59:36 CEST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="7418" started-at="2019-08-26T23:59:29 CEST" finished-at="2019-08-26T23:59:36 CEST">
+      <class name="tests.RegisterNewAccountTest">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.RegisterNewAccountTest@694e1548]" name="setup" is-config="true" duration-ms="4773" started-at="2019-08-26T23:59:29 CEST" finished-at="2019-08-26T23:59:33 CEST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="registerNewAccount()[pri:0, instance:tests.RegisterNewAccountTest@694e1548]" name="registerNewAccount" duration-ms="1412" started-at="2019-08-26T23:59:33 CEST" finished-at="2019-08-26T23:59:35 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerNewAccount -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.RegisterNewAccountTest@694e1548]" name="tearDown" is-config="true" duration-ms="1191" started-at="2019-08-26T23:59:35 CEST" finished-at="2019-08-26T23:59:36 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.RegisterNewAccountTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
