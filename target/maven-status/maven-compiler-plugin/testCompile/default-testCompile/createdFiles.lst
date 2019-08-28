@@ -1,1 +1,10 @@
+utilities\ExcelUtils.class
+tests\TC_LoginDDT_01.class
+tests\RegisterNewAccountTest.class
+pages\GurukulaRegistrationPage.class
 testbase\TestBase.class
+utilities\Reporting.class
+pages\GurukulaHomePage.class
+pages\GurukulaLoginPage.class
+tests\LoginTest.class
+utilities\ReadConfig.class

@@ -47,11 +47,11 @@ public class TC_LoginDDT_01 extends TestBase{
 		}else
 		{
 			captureScreen(driver, "loginDDT");
-			Assert.assertTrue(false);
 			logger.warn("login failed");
+			gurukulaHomePage.clickOnHomeButton();
+			Assert.assertTrue(false);
+			
 		}
-		
-		
 		
 		
 	}
