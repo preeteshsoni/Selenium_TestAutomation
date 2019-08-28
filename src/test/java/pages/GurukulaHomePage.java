@@ -21,7 +21,15 @@ public class GurukulaHomePage {
 
 	@FindBy(how = How.LINK_TEXT, using = "Register a new account")
 	WebElement lnkRegister;
-
+	
+	@FindBy(xpath = "//span[contains(@class, 'hidden-tablet ng-scope') and text()='Account']")
+	WebElement mnuAccount;
+	
+	@FindBy(linkText = "Log out")
+	WebElement lnkLogout;
+	
+	
+	
 	public void clickOnHomeButton() {
 		btnHome.click();
 	}
@@ -30,14 +38,17 @@ public class GurukulaHomePage {
 		lnkRegister.click();
 	}
 	
+	public void clickLoginLink() {
+		lnkLogin.click();
+	}
 	
-
-	/*
-	 * public boolean verifyHomeButtonDisplayed() { if(homeButton.isDisplayed()) {
-	 * System.out.println("home button displayed"); return true; } else {
-	 * System.out.println("home button not displayed"); return false; }
-	 * 
-	 * 
-	 * }
-	 */
+	public void clickAccountList() {
+		mnuAccount.click();
+	}
+	
+	public void clicklnkLogout() {
+		lnkLogout.click();
+	}
+	
+	
 }

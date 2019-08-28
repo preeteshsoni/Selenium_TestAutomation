@@ -10,6 +10,9 @@
 		<parameter name="browser" value="firefox" />
 		<classes>
 			<class name="tests.RegisterNewAccountTest" />
+			<class name="tests.LoginTest" /> 
+			<class name="tests.TC_LoginDDT_01"/>
+			
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
