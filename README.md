@@ -7,9 +7,9 @@ This Test Automation Framework is created using Java + Selenium Web Driver + Tes
 * Gurukula war up and running
 
 # Execution
-*Clone the repository
-*Open command prompt and go to project directory
-*Run maven command mvn clean install
+* Clone the repository
+* Open command prompt and go to project directory
+* Run maven command mvn clean install
 
 # Logging
 * Logging is implement using log4j
