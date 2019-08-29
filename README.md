@@ -21,7 +21,7 @@ This Test Automation Framework is created using Java + Selenium Web Driver + Tes
 * Screenshots will be saved in //Screenshots folder
 
 # Reading Excel
-*Apache POI is used to read excel and implement data driven testing
+* Apache POI is used to read excel and implement data driven testing
 
 # Page object Model and Page Factory
 * Page Object Model is used to create Object Repository for web UI elements. 
