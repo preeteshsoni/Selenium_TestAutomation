@@ -28,65 +28,72 @@ public class Reporting extends TestListenerAdapter {
 	public ExtentTest logger;
 
 	public void onStart(ITestContext testContext) {
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
-		String repName = "Test-Report-" + timeStamp + ".html";
 
-		// specify location of the report
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/" + repName);
-		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/extent-config.xml");
+		try {
+			String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// time stamp
+			String repName = "Test-Report-" + timeStamp + ".html";
 
-		extent = new ExtentReports();
+			// specify location of the report
+			htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/" + repName);
+			htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/extent-config.xml");
 
-		extent.attachReporter(htmlReporter);
-		extent.setSystemInfo("Host name", "localhost");
-		extent.setSystemInfo("Environemnt", "QA");
-		extent.setSystemInfo("user", "admin");
+			extent = new ExtentReports();
 
-		// Title of report
-		htmlReporter.config().setDocumentTitle("Gurukula Test Project"); 
-		
-		// name of the report
-		htmlReporter.config().setReportName("Functional Test Automation Report"); 
-		
-		 // location of the chart
-		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-		htmlReporter.config().setTheme(Theme.DARK);
+			extent.attachReporter(htmlReporter);
+			extent.setSystemInfo("Host name", "localhost");
+			extent.setSystemInfo("Environemnt", "QA");
+			extent.setSystemInfo("user", "admin");
+
+			// Title of report
+			htmlReporter.config().setDocumentTitle("Gurukula Test Project");
+
+			// name of the report
+			htmlReporter.config().setReportName("Functional Test Automation Report");
+
+			// location of the chart
+			htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
+			htmlReporter.config().setTheme(Theme.DARK);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	public void onTestSuccess(ITestResult tr) {
 		// create new entry in report
-		logger = extent.createTest(tr.getName()); 
-		
+		logger = extent.createTest(tr.getName());
+
 		// send the passed information to the report with GREEN color highlighted
-		logger.log(Status.PASS, MarkupHelper.createLabel(tr.getName(), ExtentColor.GREEN)); 
+		logger.log(Status.PASS, MarkupHelper.createLabel(tr.getName(), ExtentColor.GREEN));
 	}
 
 	public void onTestFailure(ITestResult tr) {
-		
-		// create new entry in report
-		logger = extent.createTest(tr.getName()); 
-		
-		// send the passed information to the report with GREEN color highlighted
-		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED)); 
+		String screenshotPath;
+		File file = null;
+		try {
+			// create new entry in report
+			logger = extent.createTest(tr.getName());
 
-		String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + tr.getName() + ".png";
+			// send the passed information to the report with GREEN color highlighted
+			logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED));
 
-		File f = new File(screenshotPath);
+			screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + tr.getName() + ".png";
 
-		if (f.exists()) {
-			try {
+			file = new File(screenshotPath);
+
+			if (file.exists()) {
 				logger.fail("Screenshot is below:" + logger.addScreenCaptureFromPath(screenshotPath));
-			} catch (IOException e) {
-				e.printStackTrace();
 			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 
 	}
 
 	public void onTestSkipped(ITestResult tr) {
-		
+
 		// create new entry in report
-		logger = extent.createTest(tr.getName()); 
+		logger = extent.createTest(tr.getName());
 		logger.log(Status.SKIP, MarkupHelper.createLabel(tr.getName(), ExtentColor.ORANGE));
 	}
 

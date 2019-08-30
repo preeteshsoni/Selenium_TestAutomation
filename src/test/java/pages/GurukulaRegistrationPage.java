@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-
 /**
  * Represents all the web elements present in Gurukula Registration page
  */
@@ -37,13 +36,10 @@ public class GurukulaRegistrationPage {
 
 		String reg = registrationLabel.getText();
 		if (reg.contentEquals("Registration")) {
-			System.out.println("register label displayed");
 			return true;
 		} else {
-			System.out.println("register label not displayed");
 			return false;
 		}
-
 	}
 
 	public void enterName(String name) {

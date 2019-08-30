@@ -9,66 +9,13 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">62,152</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">5,852</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">tests.TC_LoginDDT_01</td><td><a href="#m0">loginDDT</a></td><td rowspan="3">1567022024539</td><td rowspan="3">10051</td></tr><tr class="failedeven"><td><a href="#m1">loginDDT</a></td></tr><tr class="failedeven"><td><a href="#m2">loginDDT</a></td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m3">userLogin</a></td><td rowspan="1">1567021984253</td><td rowspan="1">4468</td></tr><tr class="passedodd"><td rowspan="1">tests.RegisterNewAccountTest</td><td><a href="#m4">registerNewAccount</a></td><td rowspan="1">1567021978164</td><td rowspan="1">1457</td></tr><tr class="passedeven"><td rowspan="1">tests.TC_LoginDDT_01</td><td><a href="#m5">loginDDT</a></td><td rowspan="1">1567021993913</td><td rowspan="1">5964</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.TC_RegisterNewAccountTest_03</td><td><a href="#m0">registerNewAccount</a></td><td rowspan="1">1567167386537</td><td rowspan="1">1585</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.TC_LoginDDT_01#loginDDT</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>testuser</td><td>testuser</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: login
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;LAPTOP-Q72PD7FI&apos;, ip: &apos;192.168.178.67&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 68.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190813150448, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 26292, moz:profile: C:\Users\preet\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b6a7dda7-fc6b-4065-8a2b-1e8db3630fb3
-*** Element info: {Using=link text, value=login}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:376)
-	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy11.click(Unknown Source)
-	at pages.GurukulaHomePage.clickLoginLink(GurukulaHomePage.java:42)
-	at tests.TC_LoginDDT_01.loginDDT(TC_LoginDDT_01.java:24)
+<h2>Test</h2><h3 id="m0">tests.TC_RegisterNewAccountTest_03#registerNewAccount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: did not expect to find [true] but found [false]
+	at tests.TC_RegisterNewAccountTest_03.registerNewAccount(TC_RegisterNewAccountTest_03.java:74)
 	at java.util.ArrayList.forEach(ArrayList.java:1257)
 ... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.TC_LoginDDT_01#loginDDT</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>preetesh</td><td>Preetesh</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: did not expect to find [true] but found [false]
-	at tests.TC_LoginDDT_01.loginDDT(TC_LoginDDT_01.java:50)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.TC_LoginDDT_01#loginDDT</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>Soni</td><td>Soni</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: login
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;LAPTOP-Q72PD7FI&apos;, ip: &apos;192.168.178.67&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 68.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190813150448, moz:geckodriverVersion: 0.23.0, moz:headless: false, moz:processID: 26292, moz:profile: C:\Users\preet\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b6a7dda7-fc6b-4065-8a2b-1e8db3630fb3
-*** Element info: {Using=link text, value=login}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:376)
-	at org.openqa.selenium.By$ByLinkText.findElement(By.java:220)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy11.click(Unknown Source)
-	at pages.GurukulaHomePage.clickLoginLink(GurukulaHomePage.java:42)
-	at tests.TC_LoginDDT_01.loginDDT(TC_LoginDDT_01.java:24)
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.LoginTest#userLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.RegisterNewAccountTest#registerNewAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.TC_LoginDDT_01#loginDDT</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

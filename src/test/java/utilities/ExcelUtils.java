@@ -10,46 +10,54 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-
 /**
  * This class reads data from excel
  */
 
 public class ExcelUtils {
 
-	public static FileInputStream fi;
-	public static FileOutputStream fo;
-	public static XSSFWorkbook wb;
-	public static XSSFSheet ws;
+	public static FileInputStream fileInput;
+	public static FileOutputStream fileOutputo;
+	public static XSSFWorkbook workbook;
+	public static XSSFSheet worksheet;
 	public static XSSFRow row;
 	public static XSSFCell cell;
 
+	/**
+	 * This method returns row count of excel
+	 */
 	public static int getRowCount(String xlfile, String xlsheet) throws IOException {
-		fi = new FileInputStream(xlfile);
-		wb = new XSSFWorkbook(fi);
-		ws = wb.getSheet(xlsheet);
-		int rowcount = ws.getLastRowNum();
-		wb.close();
-		fi.close();
+		fileInput = new FileInputStream(xlfile);
+		workbook = new XSSFWorkbook(fileInput);
+		worksheet = workbook.getSheet(xlsheet);
+		int rowcount = worksheet.getLastRowNum();
+		workbook.close();
+		fileInput.close();
 		return rowcount;
 	}
 
+	/**
+	 * This method returns cell count of a row in excel
+	 */
 	public static int getCellCount(String xlfile, String xlsheet, int rownum) throws IOException {
-		fi = new FileInputStream(xlfile);
-		wb = new XSSFWorkbook(fi);
-		ws = wb.getSheet(xlsheet);
-		row = ws.getRow(rownum);
+		fileInput = new FileInputStream(xlfile);
+		workbook = new XSSFWorkbook(fileInput);
+		worksheet = workbook.getSheet(xlsheet);
+		row = worksheet.getRow(rownum);
 		int cellcount = row.getLastCellNum();
-		wb.close();
-		fi.close();
+		workbook.close();
+		fileInput.close();
 		return cellcount;
 	}
 
+	/**
+	 * This method returns cell data of excel
+	 */
 	public static String getCellData(String xlfile, String xlsheet, int rownum, int colnum) throws IOException {
-		fi = new FileInputStream(xlfile);
-		wb = new XSSFWorkbook(fi);
-		ws = wb.getSheet(xlsheet);
-		row = ws.getRow(rownum);
+		fileInput = new FileInputStream(xlfile);
+		workbook = new XSSFWorkbook(fileInput);
+		worksheet = workbook.getSheet(xlsheet);
+		row = worksheet.getRow(rownum);
 		cell = row.getCell(colnum);
 		String data;
 		try {
@@ -59,24 +67,28 @@ public class ExcelUtils {
 		} catch (Exception e) {
 			data = "";
 		}
-		wb.close();
-		fi.close();
+		workbook.close();
+		fileInput.close();
 		return data;
 	}
+	
+	/**
+	 * This method sets cell data of excel
+	 */
 
 	public static void setCellData(String xlfile, String xlsheet, int rownum, int colnum, String data)
 			throws IOException {
-		fi = new FileInputStream(xlfile);
-		wb = new XSSFWorkbook(fi);
-		ws = wb.getSheet(xlsheet);
-		row = ws.getRow(rownum);
+		fileInput = new FileInputStream(xlfile);
+		workbook = new XSSFWorkbook(fileInput);
+		worksheet = workbook.getSheet(xlsheet);
+		row = worksheet.getRow(rownum);
 		cell = row.createCell(colnum);
 		cell.setCellValue(data);
-		fo = new FileOutputStream(xlfile);
-		wb.write(fo);
-		wb.close();
-		fi.close();
-		fo.close();
+		fileOutputo = new FileOutputStream(xlfile);
+		workbook.write(fileOutputo);
+		workbook.close();
+		fileInput.close();
+		fileOutputo.close();
 	}
 
 }

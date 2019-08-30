@@ -7,13 +7,13 @@
   <test thread-count="5" verbose="0" name="Test(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="tests.TC_LoginDDT_01">
+      <class name="tests.TC_LoginDataDriven_02">
         <methods>
           <include name="setup"/>
-          <include name="loginDDT" invocation-numbers="1 2 3"/>
           <include name="tearDown"/>
+          <include name="loginDDT" invocation-numbers="1 2 3"/>
         </methods>
-      </class> <!-- tests.TC_LoginDDT_01 -->
+      </class> <!-- tests.TC_LoginDataDriven_02 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

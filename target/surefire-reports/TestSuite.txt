@@ -1,28 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 72.201 sec <<< FAILURE! - in TestSuite
-loginDDT(tests.TC_LoginDDT_01)  Time elapsed: 14.684 sec  <<< FAILURE!
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 72.098 sec <<< FAILURE! - in TestSuite
+loginDDT(tests.TC_LoginDataDriven_02)  Time elapsed: 14.863 sec  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertTrue(Assert.java:44)
 	at org.testng.Assert.assertTrue(Assert.java:54)
-	at tests.TC_LoginDDT_01.loginDDT(TC_LoginDDT_01.java:52)
+	at tests.TC_LoginDataDriven_02.loginDDT(TC_LoginDataDriven_02.java:55)
 
-loginDDT(tests.TC_LoginDDT_01)  Time elapsed: 14.59 sec  <<< FAILURE!
+loginDDT(tests.TC_LoginDataDriven_02)  Time elapsed: 14.779 sec  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertTrue(Assert.java:44)
 	at org.testng.Assert.assertTrue(Assert.java:54)
-	at tests.TC_LoginDDT_01.loginDDT(TC_LoginDDT_01.java:52)
+	at tests.TC_LoginDataDriven_02.loginDDT(TC_LoginDataDriven_02.java:55)
 
-loginDDT(tests.TC_LoginDDT_01)  Time elapsed: 14.568 sec  <<< FAILURE!
+loginDDT(tests.TC_LoginDataDriven_02)  Time elapsed: 14.734 sec  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertTrue(Assert.java:44)
 	at org.testng.Assert.assertTrue(Assert.java:54)
-	at tests.TC_LoginDDT_01.loginDDT(TC_LoginDDT_01.java:52)
+	at tests.TC_LoginDataDriven_02.loginDDT(TC_LoginDataDriven_02.java:55)
 

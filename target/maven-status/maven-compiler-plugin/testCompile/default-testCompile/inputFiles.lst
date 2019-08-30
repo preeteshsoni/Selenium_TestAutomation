@@ -1,10 +1,10 @@
 D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\pages\GurukulaLoginPage.java
 D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\testbase\TestBase.java
-D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\tests\RegisterNewAccountTest.java
+D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\tests\TC_Login_01.java
 D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\pages\GurukulaHomePage.java
 D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\pages\GurukulaRegistrationPage.java
-D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\tests\LoginTest.java
-D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\tests\TC_LoginDDT_01.java
 D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\utilities\ReadConfig.java
 D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\utilities\Reporting.java
+D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\tests\TC_RegisterNewAccountTest_03.java
+D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\tests\TC_LoginDataDriven_02.java
 D:\Servicenow\Selenium_TestNG_Framework\Selenium_TestAutomation\src\test\java\utilities\ExcelUtils.java

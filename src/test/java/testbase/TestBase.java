@@ -35,48 +35,67 @@ public class TestBase {
 
 	public static Logger logger;
 
+	/**
+	 * This method runs before each test class and initialise driver and wait
+	 */
+	
+	
 	@Parameters("browser")
 	@BeforeClass
-	public void setup(String br) {
+	public void setup(String browser) {
 
 		logger = Logger.getLogger("gurukula");
-		PropertyConfigurator.configure("log4j.properties");
 
-		if (br.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", readconfig.getchromePath());
-			driver = new ChromeDriver();
-			logger.info("chrome browser opened");
-		} else if (br.equals("firefox")) {
+		try {
+			PropertyConfigurator.configure("log4j.properties");
 
-			System.setProperty("webdriver.gecko.driver", readconfig.getfirefoxPath());
-			driver = new FirefoxDriver();
-			logger.info("firefox browser opened");
+			if (browser.equals("chrome")) {
+				System.setProperty("webdriver.chrome.driver", readconfig.getchromePath());
+				driver = new ChromeDriver();
+				logger.info("chrome browser opened");
+			} else if (browser.equals("firefox")) {
+
+				System.setProperty("webdriver.gecko.driver", readconfig.getfirefoxPath());
+				driver = new FirefoxDriver();
+				logger.info("firefox browser opened");
+			}
+
+			driver.manage().window().maximize();
+
+			// Implicit wait
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+			driver.get(baseURL);
+			logger.info("URL is opened");
+
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-
-		driver.manage().window().maximize();
-
-		// Implicit wait
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-		driver.get(baseURL);
-		logger.info("URL is opened");
 
 	}
 
+	
+	/**
+	 * This method runs after each test class and kills driver
+	 */
+	
 	@AfterClass
 	public void tearDown() {
 
 		// driver.close();
-		driver.quit();
+		// driver.quit();
 
 	}
 
-	public void captureScreen(WebDriver driver, String tname) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		File target = new File(System.getProperty("user.dir") + "/Screenshots/" + tname + ".png");
+	/**
+	 * This method captures screenshot and saves in screenshot folder
+	 */
+	public void captureScreen(WebDriver driver, String testCasename) throws IOException {
+		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
+		File source = takeScreenShot.getScreenshotAs(OutputType.FILE);
+		File target = new File(System.getProperty("user.dir") + "/Screenshots/" + testCasename + ".png");
 		FileUtils.copyFile(source, target);
-		System.out.println("Screenshot taken");
+
 	}
 
 }

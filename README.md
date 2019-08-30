@@ -17,7 +17,7 @@ This Test Automation Framework is created using Java + Selenium Web Driver + Tes
 * Logs will be generated in //logs/selenium.logs
 
 # Screenshots
-* captureScreen method is created to capture screenshots located in //src/test/java/testbase/TestBase.java
+* CaptureScreen method is created to capture screenshots located in //src/test/java/testbase/TestBase.java
 * Screenshots will be saved in //Screenshots folder
 
 # Reading Excel
