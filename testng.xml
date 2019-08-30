@@ -5,13 +5,13 @@
 	<listeners>
 		<listener class-name="utilities.Reporting" />
 	</listeners>
-	
+
 	<test name="Test">
 		<parameter name="browser" value="firefox" />
 		<classes>
-			
-			<class name="tests.LoginTest" /> 
-			<class name="tests.TC_LoginDDT_01"/>
+
+			<class name="tests.LoginTest" />
+			<class name="tests.TC_LoginDDT_01" />
 			<class name="tests.RegisterNewAccountTest" />
 		</classes>
 	</test> <!-- Test -->

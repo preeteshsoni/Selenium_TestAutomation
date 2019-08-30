@@ -11,41 +11,39 @@ import pages.GurukulaHomePage;
 import pages.GurukulaRegistrationPage;
 import testbase.TestBase;
 
+/**
+ * This class verifies register new client functionality is working fine
+ */
 
-public class RegisterNewAccountTest extends TestBase{
+public class RegisterNewAccountTest extends TestBase {
 
 	@Test
 	public void registerNewAccount() {
 
 		GurukulaHomePage gurukulaHomePage = PageFactory.initElements(driver, GurukulaHomePage.class);
-		GurukulaRegistrationPage gurukulaRegistrationPage= PageFactory.initElements(driver, GurukulaRegistrationPage.class);
+		GurukulaRegistrationPage gurukulaRegistrationPage = PageFactory.initElements(driver,
+				GurukulaRegistrationPage.class);
 
-		//		boolean homePageDisplayed= gurukulaHomePage.verifyHomeButtonDisplayed();
-		//		assertEquals(homePageDisplayed, true, "Home page displayed");
-
-		if(driver.getTitle().equals("gurukula")) {
+		if (driver.getTitle().equals("gurukula")) {
 			Assert.assertTrue(true);
 			logger.info("Page Title matched");
-		}
-		else
-		{
+		} else {
 			try {
-				captureScreen(driver,"registerNewAccount");
+				captureScreen(driver, "registerNewAccount");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			}
 			Assert.assertTrue(false);
 			logger.info("Page Title not matched");
 		}
 
-
 		gurukulaHomePage.clickOnRegisterLink();
 
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 
@@ -54,17 +52,17 @@ public class RegisterNewAccountTest extends TestBase{
 
 		gurukulaRegistrationPage.enterName("preetesh");
 		logger.info("name entered");
-		
+
 		gurukulaRegistrationPage.enterEmail("preeteshsoni@abc.com");
 		logger.info("email entered");
-		
+
 		gurukulaRegistrationPage.enterPassword("Preetesh123");
 		logger.info("password entered");
-		
+
 		gurukulaRegistrationPage.enterConfirmPassword("Preetesh123");
 		logger.info("confirm password entered");
-		
+
 		gurukulaRegistrationPage.submitForm();
-		
+
 	}
 }

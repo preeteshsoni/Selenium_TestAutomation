@@ -16,17 +16,22 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-
 import utilities.ReadConfig;
+
+/**
+ * This class deals with all the common functions used by all the pages. This
+ * class is responsible for loading the configurations from properties files,
+ * Initialising the WebDriver, Implicit Waits and capture screenshots
+ */
 
 public class TestBase {
 
 	ReadConfig readconfig = new ReadConfig();
 
 	public WebDriver driver;
-	public String baseURL= readconfig.getApplicationURL();
-	public String username=readconfig.getUsername();
-	public String password=readconfig.getPassword();
+	public String baseURL = readconfig.getApplicationURL();
+	public String username = readconfig.getUsername();
+	public String password = readconfig.getPassword();
 
 	public static Logger logger;
 
@@ -34,17 +39,14 @@ public class TestBase {
 	@BeforeClass
 	public void setup(String br) {
 
-
-
 		logger = Logger.getLogger("gurukula");
 		PropertyConfigurator.configure("log4j.properties");
 
-		if(br.equals("chrome")) {
+		if (br.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", readconfig.getchromePath());
 			driver = new ChromeDriver();
 			logger.info("chrome browser opened");
-		}
-		else if(br.equals("firefox")) {
+		} else if (br.equals("firefox")) {
 
 			System.setProperty("webdriver.gecko.driver", readconfig.getfirefoxPath());
 			driver = new FirefoxDriver();
@@ -52,20 +54,19 @@ public class TestBase {
 		}
 
 		driver.manage().window().maximize();
+
 		// Implicit wait
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		driver.get(baseURL);
 		logger.info("URL is opened");
 
-
-
 	}
 
 	@AfterClass
 	public void tearDown() {
 
-		//driver.close(); 
+		// driver.close();
 		driver.quit();
 
 	}

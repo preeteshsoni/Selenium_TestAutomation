@@ -5,6 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+
+/**
+ * Represents all the web elements present in Gurukula Registration page
+ */
+
 public class GurukulaRegistrationPage {
 
 	WebDriver driver;
@@ -15,7 +20,6 @@ public class GurukulaRegistrationPage {
 
 	@FindBy(how = How.XPATH, using = "/html/body/div[3]/div[1]/div/div/div/h1")
 	WebElement registrationLabel;
-
 
 	@FindBy(how = How.NAME, using = "login")
 	WebElement txtLogin;
@@ -28,7 +32,6 @@ public class GurukulaRegistrationPage {
 
 	@FindBy(how = How.NAME, using = "confirmPassword")
 	WebElement txtConfirmPassword;
-
 
 	public boolean verifyRegistrationLabel() {
 
@@ -58,7 +61,7 @@ public class GurukulaRegistrationPage {
 	public void enterConfirmPassword(String password) {
 		txtConfirmPassword.sendKeys(password);
 	}
-	
+
 	public void submitForm() {
 		txtConfirmPassword.submit();
 	}
