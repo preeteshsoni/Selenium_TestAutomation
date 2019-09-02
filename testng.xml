@@ -10,9 +10,11 @@
 		<parameter name="browser" value="firefox" />
 		<classes>
 
-			<!-- <class name="tests.TC_Login_01" /> -->
-			<!-- <class name="tests.TC_LoginDataDriven_02" /> -->
+			<class name="tests.TC_Login_01" />
+			<class name="tests.TC_LoginDataDriven_02" />
 			<class name="tests.TC_RegisterNewAccountTest_03" />
+			<class name="tests.TC_CreateBranchesAndAddStaff_04" />
+		
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -63,7 +63,7 @@ public class TestBase {
 			driver.manage().window().maximize();
 
 			// Implicit wait
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
 			driver.get(baseURL);
 			logger.info("URL is opened");
@@ -83,7 +83,7 @@ public class TestBase {
 	public void tearDown() {
 
 		// driver.close();
-		// driver.quit();
+		 driver.quit();
 
 	}
 
@@ -91,10 +91,16 @@ public class TestBase {
 	 * This method captures screenshot and saves in screenshot folder
 	 */
 	public void captureScreen(WebDriver driver, String testCasename) throws IOException {
+		
+		try {
 		TakesScreenshot takeScreenShot = (TakesScreenshot) driver;
 		File source = takeScreenShot.getScreenshotAs(OutputType.FILE);
 		File target = new File(System.getProperty("user.dir") + "/Screenshots/" + testCasename + ".png");
 		FileUtils.copyFile(source, target);
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
 
 	}
 

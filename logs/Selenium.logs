@@ -1,12 +1,57 @@
 firefox browser opened
 URL is opened
-Page Title matched
-Registration Label displayed
-name entered
-email entered
+username entered
 password entered
-confirm password entered
-Registration failed
+Entity clicked
+Branch clicked
+Create branch clicked
+Branch Added
+Entity clicked
+Branch clicked
+Create branch clicked
+Branch Added
+Entity clicked
+Branch clicked
+Create branch clicked
+Branch Added
+Entity clicked
+Branch clicked
+Create branch clicked
+Branch Added
+Entity clicked
+Branch clicked
+Create branch clicked
+Branch Added
+Entity clicked
+Staff clicked
+Create staff clicked
+Name and branch entered
+Save clicked
+Staff Added
+Entity clicked
+Staff clicked
+Create staff clicked
+Name and branch entered
+Save clicked
+Staff Added
+Entity clicked
+Staff clicked
+Create staff clicked
+Name and branch entered
+Save clicked
+Staff Added
+Entity clicked
+Staff clicked
+Create staff clicked
+Name and branch entered
+Save clicked
+Staff Added
+Entity clicked
+Staff clicked
+Create staff clicked
+Name and branch entered
+Save clicked
+Staff Added
 Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
 TemplateLoader.findTemplateSource("index_en.ftl"): Not found
 TemplateLoader.findTemplateSource("index.ftl"): Found
@@ -31,6 +76,22 @@ Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed
 TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
 TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
 Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/preet/.m2/repository/com/aventstack/extentreports/3.1.2/extentreports-3.1.2.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+"test-view/standard.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
 Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
 TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
 TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found

@@ -24,19 +24,22 @@ public class TC_Login_01 extends TestBase {
 			gurukulaLoginPage = PageFactory.initElements(driver, GurukulaLoginPage.class);
 
 			if (driver.getTitle().equals("gurukula")) {
-				Assert.assertTrue(true);
 				logger.info("Page Title matched");
+				Assert.assertTrue(true);
+				
 			} else {
 				captureScreen(driver, "userLogin");
-				Assert.assertTrue(false);
 				logger.info("Page Title not matched");
+				Assert.assertTrue(false);
+				
 			}
 			gurukulaHomePage.clickLoginLink();
 			Thread.sleep(2000);
 
 			if (driver.getTitle().equals("Authentication")) {
-				Assert.assertEquals(true, true);
 				logger.info("Page Title matched");
+				Assert.assertEquals(true, true);
+				
 			} else {
 				captureScreen(driver, "userLogin");
 				logger.info("Page Title not matched");
@@ -50,8 +53,9 @@ public class TC_Login_01 extends TestBase {
 			Thread.sleep(2000);
 
 			if (driver.getTitle().equals("gurukula")) {
-				Assert.assertEquals(true, true);
 				logger.info("Page Title matched");
+				Assert.assertEquals(true, true);
+				
 			} else {
 				captureScreen(driver, "userlogin");
 				logger.info("Page Title not matched");

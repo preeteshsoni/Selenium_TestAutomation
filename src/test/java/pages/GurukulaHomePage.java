@@ -30,6 +30,18 @@ public class GurukulaHomePage {
 
 	@FindBy(linkText = "Log out")
 	WebElement lnkLogout;
+	
+	@FindBy(linkText = "Entities")
+	WebElement lnkEntities;
+	
+	@FindBy(linkText = "Branch")
+	WebElement lnkBranch;
+	
+	@FindBy(linkText = "Staff")
+	WebElement lnkStaff;
+	
+	
+	
 
 	public void clickOnHomeButton() {
 		btnHome.click();
@@ -49,6 +61,18 @@ public class GurukulaHomePage {
 
 	public void clicklnkLogout() {
 		lnkLogout.click();
+	}
+	
+	public void clicklnkEntities() {
+		lnkEntities.click();
+	}
+	
+	public void clicklnkBranch() {
+		lnkBranch.click();
+	}
+	
+	public void clicklnkStaff() {
+		lnkStaff.click();
 	}
 
 }

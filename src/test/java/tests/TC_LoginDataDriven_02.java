@@ -21,11 +21,12 @@ import utilities.ExcelUtils;
 
 public class TC_LoginDataDriven_02 extends TestBase {
 
+	GurukulaHomePage gurukulaHomePage = null;
+	GurukulaLoginPage gurukulaLoginPage = null;
+
 	@Test(dataProvider = "Logindata")
 	public void loginDDT(String user, String pwd) {
 
-		GurukulaHomePage gurukulaHomePage = null;
-		GurukulaLoginPage gurukulaLoginPage = null;
 		try {
 
 			gurukulaHomePage = PageFactory.initElements(driver, GurukulaHomePage.class);
@@ -73,15 +74,15 @@ public class TC_LoginDataDriven_02 extends TestBase {
 	@DataProvider(name = "Logindata")
 	String[][] getData() throws IOException {
 
-		String path = System.getProperty("user.dir") + "\\src\\test\\java\\testdata\\LoginDataXL.xlsx";
-		int rownum = ExcelUtils.getRowCount(path, "Sheet1");
-		int colcount = ExcelUtils.getCellCount(path, "Sheet1", 1);
+		String path = System.getProperty("user.dir") + "\\src\\test\\java\\testdata\\TestDataXL.xlsx";
+		int rownum = ExcelUtils.getRowCount(path, "Login");
+		int colcount = ExcelUtils.getCellCount(path, "Login", 1);
 
 		String logindata[][] = new String[rownum][colcount];
 
 		for (int i = 1; i <= rownum; i++) {
 			for (int j = 0; j < colcount; j++) {
-				logindata[i - 1][j] = ExcelUtils.getCellData(path, "Sheet1", i, j);
+				logindata[i - 1][j] = ExcelUtils.getCellData(path, "Login", i, j);
 			}
 		}
 		return logindata;
